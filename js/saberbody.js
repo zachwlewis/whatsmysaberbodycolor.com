@@ -42,6 +42,10 @@ function getSaberbody(alignment, level, location) {
     }
   }
 
+  // Update Tweet button to have new data.
+  $( "#tweet-button" ).attr( "data-text", "My #saberbody color is " + sbTitle[sbIndex] + "! What's yours?" );
+  window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+
   $( "#main-form" ).fadeOut( function() {
     $( "#page-title" ).html( sbTitle[sbIndex] );
     $( "#page-title" ).attr( "style", "font-weight: bold; color: " + sbColor[sbIndex] );
